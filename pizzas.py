@@ -17,11 +17,16 @@ con lo que necesitamos cada semana, y cargando dicha predicción en un csv.
 
 # Importamos las librerías necesarias
 import pandas as pd
-# import datetime
-# import re
-# import numpy as np
-
 import funciones as f
+import sys
+import signal
+
+
+def handler_signal(signal, frame):
+    # Controlamos la señal de control C, para salir correctamente del programa
+
+    print("\n\n [!] Out .......\n")
+    sys.exit(1)
 
 
 # Funciones de la ETL:
@@ -89,6 +94,8 @@ def cargar_predicciones(df_prediccion):
 
 
 if __name__ == "__main__":
+    # Controlamos la salida por la señal ctrl+C
+    signal.signal(signal.SIGINT, handler_signal)
 
     # En primer lugar, vamos a extraer todos los ficheros que vamos a
     # necesitar:
