@@ -9,6 +9,8 @@ cargar una predicción de la cantidad de ingredientes que necesitaría la pizzer
 Para ejecutar el programa, es necesario tener en el directorio de trabajo la carpeta ficheros (que contendrá los csv que vamos a analizar), el fichero funciones.py (que contendrá funciones específicas para analizar cada csv) y pizzas.py (ETL que vamos a ejecutar).
 También, será necesario tener instaladas las librerías indicadas en el fichero "requirements.txt".
 
+Dento del repositorio, podemos encontrar también la carpeta informe_calidad donde encontramos "crear_informe.py" que carga todos los csv y devuelve "informe_calidad_datos.md" que como su nombre indica analiza para cada csv su informe de calidad de datos. Para ejecutarlo y que pueda cargar los csv dentro de la carpeta dicheros es necesario ejecutarlo de la siguiente forma: "python3 informe_calidad/crear_informe.py" (en otras palabras, ejecutarlo desde el programa principal).
+
 Al ejecutar "pizzas.py" iniciaremos nuestra ETL que hará lo siguiente:
 
 1) Extracción de datos: Extraemos los csv que vamos a necesitar y los cargamos en pandas dataframes.
