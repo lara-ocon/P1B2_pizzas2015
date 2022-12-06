@@ -6,7 +6,17 @@ Hecho por Lara Ocón Madrid
 El objetivo de esta Práctica es extraer los datos de la Pizzería Maven Pizzas de 2015, y transformarlos para así
 cargar una predicción de la cantidad de ingredientes que necesitaría la pizzería cada semana.
 
-Para ejecutar el programa, es necesario tener en el directorio de trabajo la carpeta ficheros (que contendrá los csv que vamos a analizar), el fichero funciones.py (que contendrá funciones específicas para analizar cada csv) y pizzas.py (ETL que vamos a ejecutar).
+Hay dos opciones para ejecutar el programa:
+
+1) Opción de ejecución con Dockerfile
+
+Hay que crear el docker file con el script "createdockerfile.sh" y correrlo con el comando
+
+sudo docker run pizza1b2
+
+2) Opción de ejecución normal 
+
+Para ejecutar el programa, es necesario  tener en el directorio de trabajo la carpeta ficheros (que contendrá los csv que vamos a analizar), el fichero funciones.py (que contendrá funciones específicas para analizar cada csv) y pizzas.py (ETL que vamos a ejecutar).
 También, será necesario tener instaladas las librerías indicadas en el fichero "requirements.txt".
 
 Dento del repositorio, podemos encontrar también la carpeta informe_calidad donde encontramos "crear_informe.py" que carga todos los csv y devuelve "informe_calidad_datos.md" que como su nombre indica analiza para cada csv su informe de calidad de datos. Para ejecutarlo y que pueda cargar los csv dentro de la carpeta dicheros es necesario ejecutarlo de la siguiente forma: "python3 informe_calidad/crear_informe.py" (en otras palabras, ejecutarlo desde el programa principal).
