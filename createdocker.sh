@@ -1,1 +1,1 @@
-sudo docker build -t pizza1b2
+sudo docker build -t pizza1b2 .
